@@ -21,7 +21,7 @@ curl --location --request POST 'http://localhost:8080/login' \
 ```
 
 
-- `/country/{countryName}` -> A protected end-point which returns the country & currency info by name of the country (`countryName` length should be between `3-100` to avoid too-many conversion calls as the free quota is limited)
+- `/country/{countryName}` -> A protected end-point which returns the country & currency info by name of the country `countryName` length should be between `3-100` to avoid too-many conversion calls as the free quota is limited
 
 ```
 curl --location --request GET 'http://localhost:8080/country/pak' \
