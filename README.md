@@ -37,7 +37,7 @@ Most of the properties are self explaining but I'd like to discuss following:
 
 # Rate-Limiting
 
-I assumed the incoming calls needed to be rate-limited. Hence I've used `Bucket4j`for said purpose. For the currency API rate limiting, caching is used.
+I assumed the (incoming) calls to CountryAPI needed to be rate-limited, hence used `Bucket4j`.Whereas for the currencyAPI (outgoing) rate limiting, caching is used.
 
 - `app.countryinfo.api.ratelimit.perminute` can be used to change the countryAPI rate limit per-minute
 
