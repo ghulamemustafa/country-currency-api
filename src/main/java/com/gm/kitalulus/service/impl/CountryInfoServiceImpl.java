@@ -48,7 +48,7 @@ public class CountryInfoServiceImpl implements CountryInfoService {
 		List<CountryInfo> countryInfos = countryInfoMapper.map(responseEntity.getBody());
 		countryInfos.parallelStream().forEach(countryInfo -> {
 			List<Currency> currencies = countryInfo.getCurrencies().stream().map(currency->{
-				Double rate = /* currecnyInfoService.getConversionRate(currency.getCode(), baseCurrency)*/0.0;
+				Double rate =  currecnyInfoService.getConversionRate(currency.getCode(), baseCurrency);
 				currency.setExchangeRate(rate);
 				return currency;
 			}).collect(Collectors.toList());
